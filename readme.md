@@ -37,9 +37,9 @@ Test Connection: ssh -T git@github.com (Touch the gold contact when the Yubikey 
 2. GPG Verified Commits
 This environment is pre-configured to support cryptographic signing. To enable the "Verified" badge for your Git commits:
 
-Code snippet
 git config --global user.signingkey <YOUR_KEY_ID>
 git config --global commit.gpgsign true
+
 ⚠️ Troubleshooting
 "Card not available": If GPG cannot see the key, restart the hardware daemon:
 
