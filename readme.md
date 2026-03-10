@@ -30,15 +30,15 @@ Restarts the agent to apply all changes immediately.
 1. SSH Authentication
 The Yubikey is now your SSH agent. To use it with GitHub or remote servers:
 
-Export Public String: gpg --export-ssh-key apriljwarren@proton.me
+Export Public String: gpg --export-ssh-key <gpg public key>
 
 Test Connection: ssh -T git@github.com (Touch the gold contact when the Yubikey flashes).
 
 2. GPG Verified Commits
 This environment is pre-configured to support cryptographic signing. To enable the "Verified" badge for your Git commits:
 
-git config --global user.signingkey <YOUR_KEY_ID>
-git config --global commit.gpgsign true
+  git config --global user.signingkey <YOUR_KEY_ID>
+  git config --global commit.gpgsign true
 
 ⚠️ Troubleshooting
 "Card not available": If GPG cannot see the key, restart the hardware daemon:
